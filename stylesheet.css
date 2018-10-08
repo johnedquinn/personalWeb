@@ -1,5 +1,170 @@
-body{
-	background: lightgrey;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
+* {
+	box-sizing: border-box;
 }
+
+
+body{
+	margin: 0;
+	text-align: center;
+	background: #F7F7F7;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.container {
+	width: 95%;
+	margin: 0 auto;
+}
+
+/* Typography
+=======================*/
+
+h1 {
+	font-weight: 300;
+	font-size: 2rem;
+}
+
+.nameTxtBox {
+	font-size: 2rem;
+	font-weight: 550;
+	margin-bottom: 0.5em;
+}
+
+.nameTxtBox span {
+	font-weight: 300;
+	display: block;
+	font-size: .85em;
+}
+
+
+/* Buttons
+=======================*/
+
+.button {
+	display: inline-block;
+	font-size: 0.9rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-width: 2px;
+	border-style: solid;
+	padding: .5em 1.75em;
+}
+
+.button-accent {
+	color: #393E46;
+	border-color: #393E46;
+}
+
+.button-accent:hover,
+.button-accent:focus {
+	background: #5C636E;
+	border-color: #5C636E;
+	color: white;
+}
+
+
+
+/* Header
+=======================*/
+header {
+	position: absolute;
+	/*margin-top: 0em;*/
+	/*top: 5px;
+	right: 45px;*/
+	left: 0;
+	right: 0;
+	margin: 0.3em;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin: 1em;
+}
+
+nav a {
+	font-weight: 900;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: .8rem;
+	padding: .5em;
+	color: #393E46;
+	/*background: pink;*/
+}
+
+nav a:hover,
+nav a:focus {
+	color: #5C636E;
+}
+
+@media (min-width:60rem) {
+	nav {
+		float: right;
+	}
+}
+
+
+/* Home Intro Space
+=======================*/
+
+.homeIntroSpace {
+	background-color: #F7F7F7;
+	padding: 8em 0;
+}
+
+
+/* Home About Box
+=======================*/
+
+
+.homeAboutTxtBox {
+	background-color: #CACACA;
+	padding-top: 3em;
+	padding-bottom: 4em;
+	padding-left: 3em;
+	padding-right: 3em;
+	width: 100vw;
+	margin-left: -2.5%;
+	outline: 2px solid white;
+	outline-offset: -2em;
+	color: black;
+	position: relative;
+}
+
+.homeAboutTxtBox h1 {
+	background-color: #CACACA;
+	font-weight:600;
+	color: black;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -.5em;
+	padding: 0 .4em;
+}
+
+@media (min-width: 50rem) {
+	.homeAboutMe {
+		background-color: #20716A;
+		padding: 2em;
+	}
+
+	.homeAboutTxtBox {
+		width: 50%;
+		margin-left: 0%;
+		text-align: left;
+	}
+
+	.homeAboutTxtBox h1 {
+		top: -.35em;
+		left: 2.4rem;
+		transform: translateX(0);
+	}
+}
+
+
+
