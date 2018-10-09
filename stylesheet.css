@@ -7,7 +7,10 @@
 body{
 	margin: 0;
 	text-align: center;
-	background: #F7F7F7;
+	background: url("MountainTop_Austria.jpg");
+	background-repeat: no-repeat;
+	background-origin: content-box;
+	//background: #F7F7F7;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
@@ -16,31 +19,38 @@ body{
 	margin: 0 auto;
 }
 
-/* Typography
-=======================*/
+
+
+/********** Typography **********/
+/********************************/
 
 h1 {
 	font-weight: 300;
 	font-size: 2rem;
 }
 
+
 .nameTxtBox {
+	animation: fadeIn 1.5s;
 	font-size: 2rem;
 	font-weight: 550;
 	margin-bottom: 0.5em;
 }
 
 .nameTxtBox span {
+	animation: fadeIn 3s;
 	font-weight: 300;
 	display: block;
 	font-size: .85em;
 }
 
 
-/* Buttons
-=======================*/
+
+/********** Buttons **********/
+/*****************************/
 
 .button {
+	animation: fadeIn 3s;
 	display: inline-block;
 	font-size: 0.9rem;
 	text-decoration: none;
@@ -63,14 +73,11 @@ h1 {
 }
 
 
+/********** Header **********/
+/****************************/
 
-/* Header
-=======================*/
 header {
 	position: absolute;
-	/*margin-top: 0em;*/
-	/*top: 5px;
-	right: 45px;*/
 	left: 0;
 	right: 0;
 	margin: 0.3em;
@@ -92,9 +99,9 @@ nav a {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: .8rem;
-	padding: .5em;
+	padding: 8%;
 	color: #393E46;
-	/*background: pink;*/
+	//background: pink;
 }
 
 nav a:hover,
@@ -104,43 +111,44 @@ nav a:focus {
 
 @media (min-width:60rem) {
 	nav {
+		padding-right: .5em;
 		float: right;
 	}
 }
 
 
-/* Home Intro Space
-=======================*/
+/********** Home Intro Space **********/
+/**************************************/
 
 .homeIntroSpace {
 	background-color: #F7F7F7;
-	padding: 8em 0;
+	padding: 7em 0;
 }
 
 
-/* Home About Box
-=======================*/
+/********** Home About Section **********/
+/****************************************/
 
 
-.homeAboutTxtBox {
+.homeAboutCell1 {
+	animation: fadeIn 2s;
 	background-color: #CACACA;
-	padding-top: 3em;
-	padding-bottom: 4em;
-	padding-left: 3em;
-	padding-right: 3em;
+	padding: 3em;
 	width: 100vw;
-	margin-left: -2.5%;
+	//margin-left: -2.5%;
 	outline: 2px solid white;
 	outline-offset: -2em;
 	color: black;
 	position: relative;
 }
 
-.homeAboutTxtBox h1 {
+
+.homeAboutCell1 h1 {
 	background-color: #CACACA;
-	font-weight:600;
+	//font-weight:600;
 	color: black;
 	position: absolute;
+	//margin-left: 2.5%;
 	left: 50%;
 	transform: translateX(-50%);
 	top: -.5em;
@@ -148,23 +156,110 @@ nav a:focus {
 }
 
 @media (min-width: 50rem) {
-	.homeAboutMe {
+	
+	.container .homeBox{
+		display: table;
 		background-color: #20716A;
 		padding: 2em;
 	}
 
-	.homeAboutTxtBox {
-		width: 50%;
-		margin-left: 0%;
-		text-align: left;
+	.container .homeBox .homeAboutRow {
+		display: table-row;
+		vertical-align: top;
 	}
 
-	.homeAboutTxtBox h1 {
+	.container .homeBox .homeAboutRow .homeAboutCell {
+		display: table-cell;
+		width: 50%;
+		flex: 1;
+	}
+
+	.container .homeBox .homeAboutRow .homeAboutCell.homeAboutCell1 {
+		background-color: #CACACA;
+		//margin-left: 2.5%;
+		text-align: left;
+		float: left;	
+	}
+
+	.homeAboutCell1 h1 {
+		background-color: #CACACA;
 		top: -.35em;
-		left: 2.4rem;
+		left: 2.7rem;
 		transform: translateX(0);
 	}
+
+	.homeAboutCell2 {
+		animation: fadeIn 2s;
+		background-color: #CACACA;
+		//padding: 1.5em;
+		position: relative;
+		float: right;
+	}
 }
+
+
+/********** Home About Section **********/
+/****************************************/
+
+
+//.homeBox 
+.container .experienceRow {
+	animation: fadeIn 2s;
+	background-color: #CACACA;
+	padding: 3em;
+	width: 100vw;
+	//margin-left: -2.5%;
+	outline: 2px solid white;
+	outline-offset: -2em;
+	color: black;
+	position: relative;
+}
+
+@media (min-width: 50rem) {
+
+	.container .experienceRow {
+		background-color: pink;
+		padding: 2em;
+	}
+	
+	.container .experienceRow .experienceCell {
+		background-color: #CACACA;
+		//position: relative;
+		//float: middle;
+		width: 100%;
+		padding: 3em;
+	}
+
+	
+
+}
+
+
+
+
+
+/********** Modifiers **********/
+/*******************************/
+
+.imgCircle {
+	object-fit: cover;
+	//display: block;
+	width: 13em;
+	height: 13em;
+	//background-size: cover;
+	border-radius: 50%;//100px;
+	-webkit-border-radius: 50%;//100px;
+	-moz-border-radius: 50%;//100px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
+
 
 
 
